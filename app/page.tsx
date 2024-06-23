@@ -1,10 +1,11 @@
-import { Button } from '@/components/ui/button'
+import { UserButton } from '@clerk/nextjs'
 import React from 'react'
 
-export default function page() {
+export default function Page() {
   return (
     <div>
-      <Button>Click me</Button>
+      <h1>Dashboard</h1>
+      <UserButton afterSignOutUrl='/'></UserButton>
     </div>
   )
 }
