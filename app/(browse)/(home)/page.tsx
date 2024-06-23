@@ -4,8 +4,7 @@ import React from 'react'
 export default function Page() {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <UserButton afterSignOutUrl='/'></UserButton>
+      <h1>HomePage</h1>
     </div>
   )
 }
