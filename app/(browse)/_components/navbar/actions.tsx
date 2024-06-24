@@ -4,9 +4,10 @@ import {
   SignInButton, 
   UserButton, 
 } from "@clerk/nextjs";
-import { currentUser } from "@clerk/nextjs/server";
+
 
 import { Button } from "@/components/ui/button";
+import { currentUser } from "@clerk/nextjs/server";
 
 export const Actions = async () => {
   const user = await currentUser();
@@ -15,7 +16,7 @@ export const Actions = async () => {
     <div className="flex items-center justify-end gap-x-2 ml-4 lg:ml-0">
       {!user && (
         <SignInButton>
-          <Button size="sm" variant="primary" >
+          <Button size="sm" variant="primary">
             Login
           </Button>
         </SignInButton>
