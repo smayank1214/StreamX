@@ -9,8 +9,8 @@ import { useViewerToken } from "@/hooks/use-viewer-token";
 
 // import { InfoCard } from "./info-card";
 // import { AboutCard } from "./about-card";
-// import { ChatToggle } from "./chat-toggle";
-// import { Chat, ChatSkeleton } from "./chat";
+import { ChatToggle } from "./chat-toggle";
+import { Chat, ChatSkeleton } from "./chat";
 import { Video, VideoSkeleton } from "./video";
 // import { Header, HeaderSkeleton } from "./header";
 
@@ -57,11 +57,11 @@ export const StreamPlayer = ({
 
   return (
     <>
-      {/* {collapsed && (
+      {collapsed && (
         <div className="hidden lg:block fixed top-[100px] right-2 z-50">
           <ChatToggle />
         </div>
-      )} */}
+      )}
       <LiveKitRoom
         token={token}
         serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_WS_URL}
@@ -103,7 +103,7 @@ export const StreamPlayer = ({
             collapsed && "hidden"
           )}
         >
-          {/* <Chat
+          <Chat
             viewerName={name}
             hostName={user.username}
             hostIdentity={user.id}
@@ -111,7 +111,7 @@ export const StreamPlayer = ({
             isChatEnabled={stream.isChatEnabled}
             isChatDelayed={stream.isChatDelayed}
             isChatFollowersOnly={stream.isChatFollowersOnly}
-          /> */}
+          />
         </div>
       </LiveKitRoom>
     </>
@@ -126,7 +126,7 @@ export const StreamPlayerSkeleton = () => {
         {/* <HeaderSkeleton /> */}
       </div>
       <div className="col-span-1 bg-background">
-        {/* <ChatSkeleton /> */}
+        <ChatSkeleton />
       </div>
     </div>
   )
