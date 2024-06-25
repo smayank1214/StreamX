@@ -35,7 +35,6 @@ export const Recommended = ({
             username={user.username}
             imageUrl={user.imageUrl}
             isLive={user.stream?.isLive}
-            // isLive={true}
           />
         ))}
       </ul>
