@@ -8,7 +8,7 @@ import { useChatSidebar } from "@/store/use-chat-sidebar";
 import { useViewerToken } from "@/hooks/use-viewer-token";
 
 import { InfoCard } from "./info-card";
-// import { AboutCard } from "./about-card";
+import { AboutCard } from "./about-card";
 import { ChatToggle } from "./chat-toggle";
 import { Chat, ChatSkeleton } from "./chat";
 import { Video, VideoSkeleton } from "./video";
@@ -51,6 +51,8 @@ export const StreamPlayer = ({
   } = useViewerToken(user.id);
   const { collapsed } = useChatSidebar((state) => state);
 
+ console.log({token,name,identity})
+
   if (!token || !name || !identity) {
     return <StreamPlayerSkeleton />
   }
@@ -89,13 +91,13 @@ export const StreamPlayer = ({
             name={stream.name}
             thumbnailUrl={stream.thumbnailUrl}
           />
-          {/* <AboutCard
+          <AboutCard
             hostName={user.username}
             hostIdentity={user.id}
             viewerIdentity={identity}
             bio={user.bio}
             followedByCount={user._count.followedBy}
-          /> */}
+          />
         </div>
         <div
           className={cn(

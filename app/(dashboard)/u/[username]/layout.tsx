@@ -34,5 +34,4 @@ const CreatorLayout = async ({
   );
 }
  
-
 export default CreatorLayout;
