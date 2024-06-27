@@ -27,7 +27,7 @@ export const Logo = () => {
           StreamX
         </p>
         <p className="text-sm text-white text-muted-foreground">
-          Let's Stream
+          Let&apos;s Stream
         </p>
       </div>
     </div>

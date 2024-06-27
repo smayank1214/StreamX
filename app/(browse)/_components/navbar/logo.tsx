@@ -30,7 +30,7 @@ export const Logo = () => {
               StreamX
             </p>
             <p className="text-xs text-muted-foreground">
-              Let's Stream
+              Let&apos;s Stream
             </p>
           </div>
         </div>
